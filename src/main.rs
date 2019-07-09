@@ -2,6 +2,8 @@ use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
 mod basic;
+mod mstruct;
+// mod ownership;
 
 
 fn main() {
@@ -40,4 +42,28 @@ fn main() {
     println!("The value of x is: {}", x);
 
     basic::for_test();
+
+
+    // ownership
+
+    // struct
+    let user1 = mstruct::User{
+        email: String::from("cfqcsunny@gmail.com"),
+        username: String::from("csunny"),
+        sign_in_count: 1,
+        active: true,
+    };
+
+    println!("{}", user1.email);
+
+    let rect1 = mstruct::Rectangle {width: 30, height: 50};
+    let rect2 = mstruct::Rectangle {width: 10, height: 40};
+
+    println!("The area of the rectangle is {} square pixels.",
+            rect1.area()
+    );
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+
+
 }
