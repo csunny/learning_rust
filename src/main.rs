@@ -1,6 +1,8 @@
 use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
+mod basic;
+
 
 fn main() {
     // guess a number
@@ -30,4 +32,12 @@ fn main() {
         }
     }
 
+    // basic concept  
+    basic::basic_concept();    
+    basic::compose_type();
+
+    let x = basic::five();
+    println!("The value of x is: {}", x);
+
+    basic::for_test();
 }
