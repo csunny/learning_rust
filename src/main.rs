@@ -4,6 +4,7 @@ use rand::Rng;
 mod basic;
 mod mstruct;
 use std::collections::HashMap;
+mod generic;
 
 // mod ownership;
 
@@ -89,4 +90,15 @@ fn main() {
     println!("scores {:?}", scores);
 
     mstruct::split_text();
+
+
+    // 范型
+    let number_list = vec![34, 50, 25, 100, 65];
+
+    let result = generic::largest_i32(&number_list);
+    println!("The largest number is {}", result);
+
+    let char_list = vec!['y', 'm', 'a', 'q'];
+    let result = generic::largest_char(&char_list);
+    println!("The largest char is {}", result);
 }
