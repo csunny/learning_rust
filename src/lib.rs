@@ -1,32 +1,13 @@
-#[derive(Debug)]
-pub struct NewsArticle {
-    pub headline: String,
-    pub location: String,
-    pub author: String,
-    pub content: String,
-}
+#[cfg(test)]
+// mod tests{
+    
+//     use super::*;
 
-impl Summary for NewsArticle {
-    // add code here
-    fn summarize(&self) -> String{
-        format!("{}, by {} ({})", self.headline, self.author, self.location)
-    }
-}
+//     #[test]
+//     fn larger_can_hold_smaller(){
+//         let larger = Rectangle{length: 8, width:7};
+//         let smaller = Rectangle{length: 5, width: 1};
 
-pub struct Tweet {
-    pub username: String,
-    pub content: String,
-    pub reply: bool,
-    pub retweet: bool,
-}
-
-pub trait Summary {
-    // add code here
-    fn summarize(&self) -> String;
-}
-
-impl Summary for Tweet{
-    fn summarize(&self) -> String{
-        format("{}: {}", self.username, self.content)
-    }
-}
+//         assert!(larger.can_hold(&smaller));
+//     }
+// }

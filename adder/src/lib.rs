@@ -4,4 +4,9 @@ mod tests {
     fn it_works() {
         assert_eq!(2 + 2, 4);
     }
+
+    #[test]
+    fn another(){
+        println!("Make this test fail");
+    }
 }
